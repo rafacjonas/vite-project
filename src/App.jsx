@@ -15,11 +15,12 @@
 // import { ExecuteFunction } from './components/ExecuteFunction'
 // import { Message } from './components/Message'
 // import { ChangeMessageState } from './components/ChangeMessageState'
-import { UserDetails } from './components/UserDetails'
-
+//import { UserDetails } from './components/UserDetails'
+import { MyForm } from './components/MyForm'
 
 //styles
 import './App.css'
+import { Title } from './components/Title'
 
 //images
 // import MovieRankingImg from './assets/movie_ranking.png'
@@ -31,9 +32,9 @@ function App() {
   // const [name] = useState('Rafael')
 
   // const cars = [
-  //   {id:1, brand:'Ferrari', colour:'red', newCar:true, km:0},
-  //   {id:2, brand:'Porshe', colour:'yellow', newCar:false, km:1233213},
-  //   {id:3, brand:'Jeep', colour:'green', newCar:false, km:11111}
+  //   {id:1, brand:'Ferrari', color:'red', newCar:true, km:0},
+  //   {id:2, brand:'Porshe', color:'yellow', newCar:false, km:1233213},
+  //   {id:3, brand:'Jeep', color:'green', newCar:false, km:11111}
   // ]
 
   // function showMessage() {
@@ -46,22 +47,26 @@ function App() {
   //   setMessage(msg)
   // }
 
-  const peoples = [
-    {id: 1, name:"Rafael", age:34, job:"Unemployed"},
-    {id: 2, name:"Larissa", age:12, job:"Student"},
-    {id: 3, name:"Henrique", age:51, job:"Engineer"},
-    {id: 4, name:"Fernanda", age:18, job:"Student"},
-    {id: 5, name:"Raquel", age:27, job:"Doctor"}
-]
+  // const peoples = [
+  //   {id: 1, name:"Rafael", age:34, job:"Unemployed"},
+  //   {id: 2, name:"Larissa", age:12, job:"Student"},
+  //   {id: 3, name:"Henrique", age:51, job:"Engineer"},
+  //   {id: 4, name:"Fernanda", age:18, job:"Student"},
+  //   {id: 5, name:"Raquel", age:27, job:"Doctor"}
+  // ]
 
   return (
     /* multi line comment and line comment works here because is Javascript */
     // All inside jsx return must be enclosed with a tag may be div or even blank tag (cleaner code)
     <> {/* <- fragment */}
+      {/* Forms */}
+      <MyForm user={{name:"Rafael", email:"rfhjones@gmail.com", bio:"", role:""}}/>
+      {/* 
       {peoples.map((people) => (
         <UserDetails key={people.id} name={people.name} age={people.age} job={people.job}/>
       ))}
-      {/* 
+      <Title />
+      <h1 className='my_title'>Testing scoped css</h1>
       public image can be accessed direct from the root
       <div>
         <img src="/birthday.png" alt="Birthday giftcard"/>
@@ -76,13 +81,13 @@ function App() {
       props
       <ShowProps name={name} />
       destructured props
-      <CarDetails brand='BMW' km={10000} colour='red' newCar={false}/>
+      <CarDetails brand='BMW' km={10000} color='red' newCar={false}/>
       reusing component with props
-      <CarDetails brand='Ford' km={0} colour='blue' newCar={true}/>
-      <CarDetails brand='Fiat' km={40000} colour='white' newCar={false}/>
+      <CarDetails brand='Ford' km={0} color='blue' newCar={true}/>
+      <CarDetails brand='Fiat' km={40000} color='white' newCar={false}/>
       loop
       {cars.map((car) => (
-        <CarDetails key={car.id} brand={car.brand} km={car.km} colour={car.colour} newCar={car.newCar} />
+        <CarDetails key={car.id} brand={car.brand} km={car.km} color={car.color} newCar={car.newCar} />
       ))}
       children prop
       <Container myValue='test'>

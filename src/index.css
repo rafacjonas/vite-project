@@ -13,6 +13,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.red-title {
+  background-color: black;
+  color: red;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -28,7 +33,6 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  padding: 500px;
 }
 
 h1 {
